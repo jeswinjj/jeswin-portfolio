@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+
+:root {
+  --background: #fffdfd;   /* lighter version of #090040 */
+  --foreground: #ffffff;
+  --accent: #4b1fff;       /* vibrant accent */
+  --color-primary: #303030;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Antonio', sans-serif;
+}
+
+@keyframes ping-custom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(3.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-ping-custom {
+  animation: ping-custom 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
