@@ -104,7 +104,7 @@ const Home = () => {
             <div className="flex flex-col max-w-[800px]">
                 <div className="uppercase font-heading font-semibold text-lg md:text-3xl lg:text-5xl">About me</div>
                 <div className="font-sans text-sm font-light max-w-[350px] mt-5">
-                    Hi, I'm Duncan — a digital designer and Framer developer passionate about crafting meaningful and impactful digital experiences.
+                   {"Hi, I'm Duncan — a digital designer and Framer developer passionate about crafting meaningful and impactful digital experiences."}
                 </div>
 
                 <div className="flex gap-4 w-full">
