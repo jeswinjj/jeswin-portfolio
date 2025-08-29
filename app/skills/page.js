@@ -66,11 +66,11 @@ export default function Skills() {
               {category.skills.map((skill) => (
                 <li key={skill.name} className="flex items-center gap-3 text-lg">
                   {/* Logo Placeholder */}
-                  <img
+                  {/* <img
                     src={skill.logo}
                     alt={skill.name}
                     className="w-6 h-6 object-contain"
-                  />
+                  /> */}
                   {skill.name}
                 </li>
               ))}
