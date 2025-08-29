@@ -10,23 +10,39 @@ const Home = () => {
   // data for multiple accordions
   const data = [
     {
-      title: "UI/UX design",
+      title: "Full-Stack Web Development",
       items: [
-        "Wireframing and prototyping",
-        "User Interface design for web and mobile apps",
+        "Design and development of responsive, accessible web applications using React.js and Next.js",
+        "End-to-end project leadership, from concept to deployment on live domains",
+        "RESTful API design and implementation for efficient client-server data exchange",
+        "State management solutions using Redux for complex application logic",
       ],
     },
     {
-      title: "Web Development",
-      items: ["Frontend with React/Next.js", "Backend APIs with Node.js"],
+      title: "Front-End Engineering & Optimization",
+      items: [
+        "Building modern, user-friendly interfaces with HTML, CSS, and Tailwind CSS",
+        "Website performance optimization (lazy loading, code minification) for faster load times",
+        "Responsive design implementation for flawless across desktop, tablet, and mobile",
+        "Fixing UI/UX issues like text overflow and element misalignment",
+      ],
     },
     {
-      title: "Digital Marketing",
-      items: ["SEO optimization", "Content marketing strategies"],
+      title: "Back-End & Security Integration",
+      items: [
+        "Developing secure authentication workflows with token-based login and session management",
+        "Identifying and resolving critical security vulnerabilities to ensure application safety",
+        "Building internal tools and portals (e.g., company announcements, admin dashboards)",
+        "Database management and efficient SQL querying",
+      ],
     },
     {
-      title: "Web Development",
-      items: ["Frontend with React/Next.js", "Backend APIs with Node.js"],
+      title: "Data Analytics & Visualization",
+      items: [
+        "Data processing and analysis using Python, SQL, and SPSS", 
+        "Translating complex data into clear, actionable insights through Power BI dashboards",
+        "Leveraging analytical skills to inform development decisions and create data-driven solutions"
+      ],
     },
   ];
 
@@ -57,8 +73,7 @@ const Home = () => {
             Developer
           </div>
           <div className="font-sans font-light text-[11px] md:text-base lg:text-lg text-right">
-            Full Stack Developer with over a year of <br /> Professional
-            Experience
+            Full Stack Developer & <br /> Data Analyst.
           </div>
         </div>
       </div>
@@ -70,8 +85,7 @@ const Home = () => {
             what I can do for you
           </div>
           <div className="font-sans text-sm font-light max-w-[350px] mt-5">
-            As a digital designer, I am a visual storyteller, crafting
-            experiences that connect deeply and spark creativity.
+            I specialize in turning ideas into fully functional, secure, and performant web platforms that enhance user engagement and streamline business operations.
           </div>
 
           {/* Accordion List */}
@@ -104,26 +118,26 @@ const Home = () => {
             <div className="flex flex-col max-w-[800px]">
                 <div className="uppercase font-heading font-semibold text-lg md:text-3xl lg:text-5xl">About me</div>
                 <div className="font-sans text-sm font-light max-w-[350px] mt-5">
-                   {"Hi, I'm Duncan — a digital designer and Framer developer passionate about crafting meaningful and impactful digital experiences."}
+                   {"Hi, I'm Jeswin — A Full Stack Developer specializing in modern React and Next.js, building secure, high-performance digital experiences from front-end to back-end."}
                 </div>
 
                 <div className="flex gap-4 w-full">
                     <div className="basis-1/3">
                         <div className="flex flex-col gap-1">
-                            <span className="font-heading text-4xl font-extrabold">1+</span>
+                            <span className="font-heading text-4xl font-extrabold text-primary">1+</span>
                             <span className="font-sans font-semibold text-sm">Years of Experience</span>
                         </div>
                     </div>
                     <div className="basis-1/3">
                         <div className="flex flex-col gap-1">
-                            <span className="font-heading text-4xl font-extrabold">5+</span>
+                            <span className="font-heading text-4xl font-extrabold text-primary">5+</span>
                             <span className="font-sans font-semibold text-sm">Completed Projects</span>
                         </div>
                     </div>
                     <div className="basis-1/3">
                         <div className="flex flex-col gap-1">
-                            <span className="font-heading text-4xl font-extrabold">2+</span>
-                            <span className="font-sans font-semibold text-sm">Clients on Worldwide</span>
+                            <span className="font-heading text-4xl font-extrabold text-primary">100%</span>
+                            <span className="font-sans font-semibold text-sm">Client Satisfaction</span>
                         </div>
                     </div>
                 </div>

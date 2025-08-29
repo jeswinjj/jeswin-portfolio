@@ -1,10 +1,20 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoMdHand } from "react-icons/io";
 
 export default function Flipping() {
   const [scrollY, setScrollY] = useState(0);
+  const [showHand, setShowHand] = useState(true);
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowHand((prev) => !prev);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,7 +99,7 @@ export default function Flipping() {
                 opacity: opacityFront
               }}
             >
-              <div className="w-full h-full rounded-xl shadow-2xl" style={{ backfaceVisibility: 'hidden' }}>
+              <div className="w-full h-full rounded-xl shadow-2xl " style={{ backfaceVisibility: 'hidden' }}>
                 <Image
                   src="./images/home/profile-pic.jpg"
                   alt="Profile Pic"
@@ -98,6 +108,41 @@ export default function Flipping() {
                   height={2000}
                   priority
                 />
+                {scrollY <= 0.4270783847980998 && (
+                <div className="absolute rounded-full bg-primary -ml-10 -mt-10 w-20 h-20 flex justify-center items-center overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    {showHand ? (
+                      <motion.div
+                        key="hand"
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={{
+                          y: 0,
+                          opacity: 1,
+                          rotate: [0, 20, -10, 20, 0], // waving effect
+                        }}
+                        exit={{ y: 50, opacity: 0 }}
+                        transition={{
+                          duration: 0.6,
+                          rotate: { repeat: Infinity, repeatType: "mirror", duration: 1 },
+                        }}
+                      >
+                        <IoMdHand className="text-white text-4xl" />
+                      </motion.div>
+                    ) : (
+                      <motion.span
+                        key="hi"
+                        className="text-white text-4xl"
+                        initial={{ y: -50, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -50, opacity: 0 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        Hi
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
+                </div>
+                )}
               </div>
             </div>
             

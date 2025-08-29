@@ -7,12 +7,14 @@
   --foreground: #ffffff;
   --accent: #4b1fff;       /* vibrant accent */
   --color-primary: #303030;
+  --primary: #6a71df;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-primary: var(--primary);
 
   --font-sans: var(--font-inter);     /* ✅ Body/Default text = Inter */
   --font-heading: var(--font-antonio); /* ✅ Headings = Antonio */

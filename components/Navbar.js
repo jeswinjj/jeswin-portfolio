@@ -86,9 +86,13 @@ export default function Navbar() {
                 {link.name}
               </ScrollLink>
             ))}
-            <button className="px-6 py-1 bg-[#303030] text-white rounded-full">
-                Contact
-            </button>
+            <button className="relative px-6 py-1 rounded-full bg-[#303030] text-white overflow-hidden group">
+  <span className="relative z-10">Contact</span>
+  <span className="absolute inset-0 bg-gradient-to-r from-primary to-primary 
+                   translate-x-[-100%] group-hover:translate-x-0 
+                   transition-transform duration-500 ease-out"></span>
+</button>
+
           </div>
           
 
