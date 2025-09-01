@@ -20,7 +20,7 @@ export default function Projects() {
             <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
               <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">Next.JS Project</div>
               <div className="font-heading text-3xl md:text-4xl lg:text-5xl text-white uppercase font-bold text-center">Internal Company Portal</div>
-              <div className="font-sans text-sm md:text-base text-white text-center max-w-md">Created promotional materials for the "Summer Vibes Festival," including posters, flyers, and social media graphics.</div>
+              <div className="font-sans text-sm md:text-base text-white text-center max-w-md">{"Created promotional materials for the Summer Vibes Festival, including posters, flyers, and social media graphics."}</div>
             </div>    
           </div>
         </div>

@@ -76,7 +76,7 @@ export default function Contact() {
         {/* Text Content */}
         <div>
           <div className="uppercase font-heading font-semibold text-lg md:text-3xl lg:text-5xl mb-6">
-            Let's work together
+            {"Let's work together"}
           </div>
           <div className="text-lg font-light font-sans">
             {`Let’s build something impactful together—whether it’s your brand, your website, or your next big idea.`}

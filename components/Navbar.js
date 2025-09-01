@@ -35,9 +35,8 @@ export default function Navbar() {
     { name: "Home", href: "home" },
     { name: "About", href: "about" },
     { name: "Skills", href: "skills" },
-    { name: "Experience", href: "experience" },
+    // { name: "Experience", href: "experience" },
     { name: "Projects", href: "projects" },
-    // { name: "Contact", href: "contact" },
   ];
 
   return (
@@ -86,7 +85,7 @@ export default function Navbar() {
                 {link.name}
               </ScrollLink>
             ))}
-            <button className="relative px-6 py-1 rounded-full bg-[#303030] text-white overflow-hidden group">
+            <button  className="relative px-6 py-1 rounded-full bg-[#303030] text-white overflow-hidden group">
               <span className="relative z-10">Contact</span>
               <span className="absolute inset-0 bg-gradient-to-r from-primary to-primary 
                               translate-x-[-100%] group-hover:translate-x-0 
