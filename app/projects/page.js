@@ -15,7 +15,7 @@ export default function Projects() {
         {/* Project 1 */}
         <div className="sticky top-[70px] h-[100vh] transition-all duration-700 ease-out">
           <div className="relative w-full h-full rounded-3xl overflow-hidden">
-            <Image src="/images/projects/portal.jpg" alt="Internal Company Portal" fill className="object-cover"/>
+            <Image src="./images/projects/portal.jpg" alt="Internal Company Portal" fill className="object-cover"/>
             <div className="absolute inset-0 bg-black/60 rounded-3xl"></div>
             <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
               <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">Next.JS Project</div>
@@ -28,7 +28,7 @@ export default function Projects() {
         {/* Project 2 */}
         <div className="sticky top-[70px] h-[100vh] transition-all duration-700 ease-out">
           <div className="relative w-full h-full rounded-3xl overflow-hidden">
-            <Image src="/images/projects/coding.jpg" alt="Company Website" fill className="object-cover"/>
+            <Image src="./images/projects/coding.jpg" alt="Company Website" fill className="object-cover"/>
             <div className="absolute inset-0 bg-black/60 rounded-3xl"></div>
             <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
               <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">Tailwind Project</div>
@@ -41,7 +41,7 @@ export default function Projects() {
         {/* Project 3 */}
         <div className="sticky top-[70px] h-[100vh] transition-all duration-700 ease-out">
           <div className="relative w-full h-full rounded-3xl overflow-hidden">
-            <Image src="/images/projects/analyst-laptop.jpg" alt="Personal Dashboard Project" fill className="object-cover"/>
+            <Image src="./images/projects/analyst-laptop.jpg" alt="Personal Dashboard Project" fill className="object-cover"/>
             <div className="absolute inset-0 bg-black/60 rounded-3xl"></div>
             <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
               <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">PowerBI Project</div>

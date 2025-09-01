@@ -23,7 +23,7 @@ export default function Contact() {
         <div className="w-1/2 flex justify-end">
           <div className="w-fit">
             <Image
-              src="/images/home/profile-pic.jpg"
+              src="./images/home/profile-pic.jpg"
               alt="Profile Pic"
               className="w-[300px] h-auto object-cover rounded-xl relative"
               width={2000}

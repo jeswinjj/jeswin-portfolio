@@ -133,7 +133,7 @@ export default function Flipping() {
                 style={{ backfaceVisibility: "hidden" }}
               >
                 <Image
-                  src="/images/home/profile-pic.jpg"
+                  src="./images/home/profile-pic.jpg"
                   alt="Profile Pic"
                   className="w-full h-full object-cover rounded-xl"
                   width={2000}
@@ -198,7 +198,7 @@ export default function Flipping() {
                 style={{ backfaceVisibility: "hidden" }}
               >
                 <Image
-                  src="/images/home/profile-back.jpg"
+                  src="./images/home/profile-back.jpg"
                   alt="Profile Back"
                   className="w-full h-full object-cover rounded-xl"
                   width={2000}

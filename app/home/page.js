@@ -60,7 +60,7 @@ const Home = () => {
         </div>
 
         {/* <Image
-          src="/images/home/profile-pic.jpg"
+          src="./images/home/profile-pic.jpg"
           alt="Profile Pic"
           className="max-w-[300px] h-auto object-cover rounded-xl"
           width={2000}
@@ -104,7 +104,7 @@ const Home = () => {
         </div>
 
         {/* <Image
-          src="/images/home/profile-back.jpg"
+          src="./images/home/profile-back.jpg"
           alt="Profile Pic"
           className="max-w-[300px] h-fit object-cover rounded-xl rotate-6"
           width={2000}
@@ -143,7 +143,7 @@ const Home = () => {
                 </div>
             </div>
             {/* <Image
-            src="/images/home/profile-pic.jpg"
+            src="./images/home/profile-pic.jpg"
             alt="Profile Pic"
             className="max-w-[300px] h-fit object-cover rounded-xl rotate-6"
             width={2000}
