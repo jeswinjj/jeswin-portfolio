@@ -1,50 +1,55 @@
+"use client"
+
+import Image from "next/image";
+
 export default function Projects() {
-  const projects = [
-    {
-      title: "Internal Company Portal",
-      tech: "Next.js",
-      details: [
-        "Designed and developed portal enabling real-time publishing of organizational news.",
-        "Built user-friendly employee interface and admin dashboard for HR.",
-        "Implemented secure authentication with token-based login & session handling.",
-      ],
-    },
-    {
-      title: "Company Website",
-      tech: "HTML, Tailwind",
-      details: [
-        "Re-engineered the website from scratch, resolving layout & styling issues.",
-        "Delivered responsive design optimized for all devices.",
-        "Improved load speed by 25% with lazy loading & optimization.",
-        "Achieved 100% SEO score with on-page optimization.",
-      ],
-    },
-    {
-      title: "Healthcare Chatbot",
-      tech: "Machine Learning Project",
-      details: [
-        "Crafted chatbot for disease diagnosis using NLP + ML algorithms.",
-        "Implemented Support Vector Machine and Decision Tree models.",
-        "Achieved high precision in disease classification.",
-      ],
-    },
-  ];
 
   return (
-    <section className="max-w-4xl mx-auto py-16 px-6">
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="space-y-8">
-        {projects.map((project) => (
-          <div key={project.title} className="border p-4 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">{project.title}</h3>
-            <p className="text-gray-600 mb-2">{project.tech}</p>
-            <ul className="list-disc ml-6 space-y-1">
-              {project.details.map((d, i) => (
-                <li key={i}>{d}</li>
-              ))}
-            </ul>
+    <section className="relative py-10"> 
+      <h2 className="uppercase font-heading font-semibold text-lg md:text-3xl lg:text-5xl mb-6">Featured Projects</h2>
+      <div className="text-base font-sans font-light max-w-[350px] mb-16">
+        These selected projects reflect my passion for blending strategy with creativity — solving real problems through thoughtful design and impactful storytelling.
+      </div>
+
+      <div className="projects-container relative h-[300vh]" >
+        {/* Project 1 */}
+        <div className="sticky top-[70px] h-[100vh] transition-all duration-700 ease-out">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden">
+            <Image src="/images/projects/portal.jpg" alt="Internal Company Portal" fill className="object-cover"/>
+            <div className="absolute inset-0 bg-black/60 rounded-3xl"></div>
+            <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
+              <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">Next.JS Project</div>
+              <div className="font-heading text-3xl md:text-4xl lg:text-5xl text-white uppercase font-bold text-center">Internal Company Portal</div>
+              <div className="font-sans text-sm md:text-base text-white text-center max-w-md">Created promotional materials for the "Summer Vibes Festival," including posters, flyers, and social media graphics.</div>
+            </div>    
           </div>
-        ))}
+        </div>
+
+        {/* Project 2 */}
+        <div className="sticky top-[70px] h-[100vh] transition-all duration-700 ease-out">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden">
+            <Image src="/images/projects/coding.jpg" alt="Company Website" fill className="object-cover"/>
+            <div className="absolute inset-0 bg-black/60 rounded-3xl"></div>
+            <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
+              <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">Tailwind Project</div>
+              <div className="font-heading text-3xl md:text-4xl lg:text-5xl text-white uppercase font-bold text-center">Company Website</div>
+              <div className="font-sans text-sm md:text-base text-white text-center max-w-md">Created promotional materials for the social media graphics.</div>
+            </div>    
+          </div>
+        </div>
+
+        {/* Project 3 */}
+        <div className="sticky top-[70px] h-[100vh] transition-all duration-700 ease-out">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden">
+            <Image src="/images/projects/analyst-laptop.jpg" alt="Personal Dashboard Project" fill className="object-cover"/>
+            <div className="absolute inset-0 bg-black/60 rounded-3xl"></div>
+            <div className="project-content absolute inset-0 flex flex-col gap-4 justify-center items-center p-4 transition-opacity duration-500">
+              <div className="font-sans font-light text-white bg-primary w-fit text-center px-4 text-sm py-1 rounded-full">PowerBI Project</div>
+              <div className="font-heading text-3xl md:text-4xl lg:text-5xl text-white uppercase font-bold text-center">Personal Dashboard Project</div>
+              <div className="font-sans text-sm md:text-base text-white text-center max-w-md">Created professional dashboard with data and its insights</div>
+            </div>    
+          </div>
+        </div>
       </div>
     </section>
   );

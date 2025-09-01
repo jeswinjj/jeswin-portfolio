@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       {/* Hero Section */}
-      <div className=" h-screen flex w-full items-center justify-between lg:ml-[140px] lg:mr-[120px]">
+      <div className=" h-screen flex w-full items-center justify-between lg:ml-[160px] lg:mr-[140px]">
         <div className="font-heading">
           <div className="font-semibold text-lg md:text-xl lg:text-2xl uppercase">
             Jeswin J J
@@ -79,7 +79,7 @@ const Home = () => {
       </div>
 
       {/* What I Can Do Section */}
-      <div className="h-screen font-heading flex w-full items-center gap-10 lg:mx-20">
+      <div className="h-screen font-heading flex w-full items-center gap-10 ">
         <div className="font-heading max-w-[500px]">
           <div className="font-semibold text-lg md:text-3xl lg:text-5xl uppercase">
             what I can do for you
@@ -114,7 +114,7 @@ const Home = () => {
       </div>
 
         {/* About Me */}
-        <div className="h-[80vh] items-center flex w-full gap-10 lg:mx-20">
+        <div className="h-[80vh] items-center flex w-full gap-10">
             <div className="flex flex-col max-w-[800px]">
                 <div className="uppercase font-heading font-semibold text-lg md:text-3xl lg:text-5xl">About me</div>
                 <div className="font-sans text-sm font-light max-w-[350px] mt-5">
