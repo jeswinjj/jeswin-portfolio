@@ -18,7 +18,7 @@ export default function Contact() {
 
   return (
     <section className="flex py-10">
-      <div className="flex gap-20 justify-center items-center relative">
+      <div className="flex max-md:flex-col gap-20 justify-center items-center relative">
         {/* Profile Pic */}
         <div className="w-1/2 flex justify-end">
           <div className="w-fit">
@@ -75,10 +75,10 @@ export default function Contact() {
 
         {/* Text Content */}
         <div>
-          <div className="uppercase font-heading font-semibold text-lg md:text-3xl lg:text-5xl mb-6">
+          <div className="uppercase font-heading font-semibold text-4xl md:text-3xl lg:text-5xl mb-6">
             {"Let's work together"}
           </div>
-          <div className="text-lg font-light font-sans">
+          <div className="text-base lg:text-lg font-light font-sans">
             {`Let’s build something impactful together—whether it’s your brand, your website, or your next big idea.`}
           </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
             <form className="flex flex-col gap-4 w-full max-w-md py-10">
               {/* Name */}
               <div className="flex flex-col">
-                <label htmlFor="name" className="mb-1 text-sm text-primary font-sans font-light">
+                <label htmlFor="name" className="mb-1 text-base text-primary font-sans font-light">
                   Name
                 </label>
                 <input
@@ -94,14 +94,14 @@ export default function Contact() {
                   id="name"
                   name="name"
                   placeholder="Your name"
-                  className="border border-gray-100 rounded-3xl font-sans font-light text-sm bg-[#f5f5f5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="border border-gray-100 rounded-3xl font-sans font-light text-base bg-[#f5f5f5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>
 
               {/* Email */}
               <div className="flex flex-col">
-                <label htmlFor="email" className="mb-1 text-sm text-primary font-sans font-light">
+                <label htmlFor="email" className="mb-1 text-base text-primary font-sans font-light">
                   Email
                 </label>
                 <input
@@ -109,14 +109,14 @@ export default function Contact() {
                   id="email"
                   name="email"
                   placeholder="you@example.com"
-                  className="border border-gray-100 rounded-3xl font-sans font-light text-sm bg-[#f5f5f5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="border border-gray-100 rounded-3xl font-sans font-light text-base bg-[#f5f5f5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                   required
                 />
               </div>
 
                 {/* Message */}
                 <div className="flex flex-col">
-                  <label htmlFor="message" className="mb-1 text-sm text-primary font-sans font-light">
+                  <label htmlFor="message" className="mb-1 text-base text-primary font-sans font-light">
                     Message
                   </label>
                   <textarea
@@ -124,7 +124,7 @@ export default function Contact() {
                     name="message"
                     rows="4"
                     placeholder="Write your message..."
-                    className="border border-gray-100 rounded-3xl font-sans font-light text-sm bg-[#f5f5f5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="border border-gray-100 rounded-3xl font-sans font-light text-base bg-[#f5f5f5] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                     required
                   />
                 </div>

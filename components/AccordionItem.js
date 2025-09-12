@@ -1,8 +1,9 @@
 "use client";
 
-import React from 'react'
+import React from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoMdCheckmark } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function AccordionItem({ index, title, items, isOpen, onClick }) {
   return (
@@ -13,21 +14,29 @@ export default function AccordionItem({ index, title, items, isOpen, onClick }) 
       >
         <div className="flex text-2xl gap-2">
           <span>{index}.</span>
-          <span className="uppercase">{title}</span>
+          <span className="uppercase text-left">{title}</span>
         </div>
         {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </button>
 
-      {isOpen && (
-        <ul className="flex flex-col font-sans text-sm font-light mt-2 mb-3 gap-3">
-          {items.map((item, i) => (
-            <li key={i} className="flex items-center gap-2">
-              <IoMdCheckmark className="text-green-500 border border-gray-400 rounded-full" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="overflow-hidden flex flex-col font-sans text-sm font-light mt-2 mb-3 gap-3"
+          >
+            {items.map((item, i) => (
+              <li key={i} className="flex items-center gap-2">
+                <IoMdCheckmark className="text-primary border border-gray-400 rounded-full" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

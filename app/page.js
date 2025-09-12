@@ -14,7 +14,7 @@ export default function Page() {
     <div>
       <main className="px-5 md:px-20 lg:px-30">
         <section id="home" className="relative flex justify-center w-full">
-          <div className="absolute z-20"><Flipping /></div>
+          <div className="absolute z-20 hidden md:block"><Flipping /></div>
           <div className="z-30"><Home /></div>
         </section>
         {/* <section id="home"></section> */}
