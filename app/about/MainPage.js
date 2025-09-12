@@ -55,7 +55,7 @@ const MainPage = () => {
             Jeswin J J
           </div>
           <p className="text-light font-sans max-w-[400px] text-sm">
-            I'm a Full Stack Developer skilled in React.js, Next.js, and modern web technologies, creating clean, responsive, and secure web applications.
+            {"I'm a Full Stack Developer skilled in React.js, Next.js, and modern web technologies, creating clean, responsive, and secure web applications."}
           </p>
           <p className="text-light font-sans max-w-[400px] text-sm mt-4">
            With a strong base in Data Analytics using SQL, Python, and Power BI, I build solutions that blend seamless user experiences with data-driven insights.
