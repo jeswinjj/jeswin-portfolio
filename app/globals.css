@@ -56,3 +56,16 @@ h1, h2, h3, h4, h5, h6 {
 .animate-ping-custom {
   animation: ping-custom 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+
+/* Prevent transform glitches */
+.flip-element {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Force GPU rendering */
+* {
+  transform: translateZ(0);
+}

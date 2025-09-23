@@ -57,10 +57,14 @@ function ProjectCard({ project, isMobile = false }) {
   );
 }
 
-export default function Projects() {
+export default function Projects({ variant = "large" }) {
+  const headingClass =
+    variant === "default"
+      ? "text-4xl md:text-3xl lg:text-5xl"
+      : "text-4xl md:text-3xl lg:text-8xl mt-20";
   return (
-    <section className="relative py-10">
-      <h2 className="uppercase font-heading font-semibold text-4xl md:text-3xl lg:text-5xl mb-6">
+    <section className="relative py-10 px-5 md:px-20 lg:px-30">
+      <h2 className={`uppercase font-heading font-semibold text-4xl md:text-3xl lg:text-5xl mb-6  ${headingClass}`}>
         Featured Projects
       </h2>
       <p className="text-base font-sans font-light max-w-[350px] mb-16">

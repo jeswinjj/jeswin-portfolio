@@ -18,9 +18,9 @@ export default function Contact() {
 
   return (
     <section className="flex py-10">
-      <div className="flex max-md:flex-col gap-20 justify-center items-center relative">
+      <div className="flex max-md:flex-col gap-20 w-full justify-center items-center relative">
         {/* Profile Pic */}
-        <div className="w-1/2 flex justify-end">
+        <div className="w-1/4 flex justify-end">
           <div className="w-fit">
             <Image
               src="./images/home/profile-pic.jpg"

@@ -12,8 +12,8 @@ import Home from "./home/page";
 export default function Page() {
   return (
     <div>
-      <main className="px-5 md:px-20 lg:px-30">
-        <section id="home" className="relative flex justify-center w-full">
+      <main className="">
+        <section id="home" className="relative flex justify-center w-full px-5 md:px-20 lg:px-30">
           <div className="absolute z-20 hidden md:block"><Flipping /></div>
           <div className="z-30"><Home /></div>
         </section>
@@ -21,7 +21,7 @@ export default function Page() {
         {/* <section id="about"><About /></section> */}
         {/* <section id="skills"><Skills /></section> */}
         {/* <section id="experience"><Experience /></section> */}
-        <section id="projects"><Projects /></section>
+        <section id="projects"><Projects variant="default"/></section>
         {/* <section id="education"><Education /></section> */}
         <section id="contact"><Contact /></section>
       </main>
