@@ -20,12 +20,12 @@ export default function Contact() {
     <section className="flex py-10">
       <div className="flex max-md:flex-col gap-20 w-full justify-center items-center relative">
         {/* Profile Pic */}
-        <div className="w-1/4 flex justify-end">
-          <div className="w-fit">
+        <div className="w-fit flex h-full justify-center items-center">
+          <div className="w-full">
             <Image
               src="./images/home/profile-pic.jpg"
               alt="Profile Pic"
-              className="w-[300px] h-auto object-cover rounded-xl relative"
+              className="w-full h-auto max-h-[400px] lg:max-h-[600px] object-cover rounded-xl relative"
               width={2000}
               height={2000}
               priority

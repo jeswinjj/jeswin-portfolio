@@ -58,14 +58,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Prevent transform glitches */
-.flip-element {
+/* .flip-element {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
-}
+} */
 
 /* Force GPU rendering */
-* {
+/* * {
   transform: translateZ(0);
-}
+} */

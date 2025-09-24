@@ -12,7 +12,7 @@ import Home from "./home/page";
 export default function Page() {
   return (
     <div>
-      <main className="">
+      <main className="pb-5">
         <section id="home" className="relative flex justify-center w-full px-5 md:px-20 lg:px-30">
           <div className="absolute z-20 hidden md:block"><Flipping /></div>
           <div className="z-30"><Home /></div>
@@ -23,7 +23,7 @@ export default function Page() {
         {/* <section id="experience"><Experience /></section> */}
         <section id="projects"><Projects variant="default"/></section>
         {/* <section id="education"><Education /></section> */}
-        <section id="contact"><Contact /></section>
+        <section id="contact" className="px-5 md:px-20 lg:px-30"><Contact /></section>
       </main>
     </div>
   );

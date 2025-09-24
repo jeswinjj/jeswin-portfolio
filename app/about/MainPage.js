@@ -9,7 +9,7 @@ import Image from "next/image";
 // Reusable Section Wrapper
 function Section({ title, children, titleClass = "text-4xl md:text-4xl lg:text-5xl" }) {
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="section h-screen flex justify-start items-center">
       <div className="font-heading">
         <div className={`font-extrabold uppercase py-8 ${titleClass}`}>{title}</div>
         {children}

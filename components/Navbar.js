@@ -31,7 +31,7 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Skills", href: "/skills" },
+    // { name: "Skills", href: "/skills" },
     { name: "Projects", href: "/projects" },
   ];
 
@@ -75,7 +75,7 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              <Link href="/contact">
+              <Link href="#contact">
                 <button className="relative px-6 py-1 rounded-full bg-[#303030] text-white overflow-hidden group">
                   <span className="relative z-10">Contact</span>
                   <span className="absolute inset-0 bg-gradient-to-r from-primary to-primary 
@@ -88,6 +88,7 @@ export default function Navbar() {
 
           {/* Hire Me (scroll down) */}
           {isScrollingDown && (
+           <Link href="#contact">
             <div className="flex items-center justify-center gap-4 px-2">
               <span>Available for work</span>
               <div className="relative flex items-center justify-center w-5 h-5">
@@ -95,6 +96,7 @@ export default function Navbar() {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75 animate-ping"></span>
               </div>
             </div>
+            </Link>
           )}
         </div>
 
