@@ -92,63 +92,63 @@ const MainPage = () => {
 
   const techStack = [
     {
-      src: "/images/about/react-js.svg",
+      src: "./images/about/react-js.svg",
       alt: "React.js logo",
       name: "React.js",
       description:
         "My go-to library for building dynamic, component-driven user interfaces that scale seamlessly.",
     },
     {
-      src: "/images/about/next-js.svg",
+      src: "./images/about/next-js.svg",
       alt: "Next.js logo",
       name: "Next.js",
       description:
         "Framework I use for fast, optimized, and SEO-friendly full-stack applications.",
     },
     {
-      src: "/images/about/tailwind-css.svg",
+      src: "./images/about/tailwind-css.svg",
       alt: "Tailwind CSS logo",
       name: "Tailwind CSS",
       description:
         "Utility-first styling framework I rely on for crafting responsive and clean UIs quickly.",
     },
     // {
-    //   src: "/images/about/javascript.svg",
+    //   src: "./images/about/javascript.svg",
     //   alt: "JavaScript logo",
     //   name: "JavaScript",
     //   description:
     //     "The core language I use to bring interactivity, logic, and functionality to web applications.",
     // },
     {
-      src: "/images/about/python.svg",
+      src: "./images/about/python.svg",
       alt: "Python logo",
       name: "Python",
       description:
         "My tool for automation, data processing, and building analytics-driven solutions.",
     },
     {
-      src: "/images/about/mysql.svg",
+      src: "./images/about/mysql.svg",
       alt: "MySQL logo",
       name: "MySQL",
       description:
         "Reliable database solution I use for structured data storage and efficient querying.",
     },
     {
-      src: "/images/about/power-bi.svg",
+      src: "./images/about/power-bi.svg",
       alt: "Power BI logo",
       name: "Power BI",
       description:
         "My choice for creating interactive dashboards and data visualizations that drive insights.",
     },
     {
-      src: "/images/about/github.svg",
+      src: "./images/about/github.svg",
       alt: "GitHub logo",
       name: "GitHub",
       description:
         "Version control hub I use to manage codebases, track changes, and collaborate effectively.",
     },
     // {
-    //   src: "/images/about/jira.svg",
+    //   src: "./images/about/jira.svg",
     //   alt: "Jira logo",
     //   name: "Jira",
     //   description:
