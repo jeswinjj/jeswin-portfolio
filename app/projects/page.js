@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
 const projects = [
@@ -9,11 +9,12 @@ const projects = [
     id: 1,
     title: "Internal Company Portal",
     type: "Next.JS Project",
-    description: "Created promotional materials for the Summer Vibes Festival, including posters, flyers, and social media graphics.",
+    description:
+      "Created promotional materials for the Summer Vibes Festival, including posters, flyers, and social media graphics.",
     image: "/images/projects/portal.jpg",
     tech: ["Next.js", "TypeScript", "Tailwind", "Prisma"],
     link: "#",
-    gradient: "from-purple-500/20 to-blue-500/20"
+    gradient: "from-purple-500/20 to-blue-500/20",
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const projects = [
     image: "/images/projects/coding.jpg",
     tech: ["React", "Tailwind", "Framer Motion"],
     link: "#",
-    gradient: "from-green-500/20 to-cyan-500/20"
+    gradient: "from-green-500/20 to-cyan-500/20",
   },
   {
     id: 3,
@@ -33,14 +34,14 @@ const projects = [
     image: "/images/projects/analyst-laptop.jpg",
     tech: ["Power BI", "SQL", "Python"],
     link: "#",
-    gradient: "from-orange-500/20 to-red-500/20"
+    gradient: "from-orange-500/20 to-red-500/20",
   },
 ];
 
 function ProjectCard({ project, isMobile = false, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
-  
+
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -49,15 +50,19 @@ function ProjectCard({ project, isMobile = false, index }) {
       initial={{ opacity: 0, y: 100 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      className={`relative group cursor-pointer ${isMobile ? "h-[400px]" : "h-[90vh]"}`}
+      className={`relative group cursor-pointer ${
+        isMobile ? "h-[400px]" : "h-[90vh]"
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Background Gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} rounded-3xl`} />
-      
+      <div
+        className={`absolute inset-0 bg-gradient-to-br ${project.gradient} rounded-3xl`}
+      />
+
       {/* Image with Parallax Effect */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 rounded-3xl overflow-hidden"
         animate={{ scale: isHovered ? 1.05 : 1 }}
         transition={{ duration: 0.5 }}
@@ -82,7 +87,7 @@ function ProjectCard({ project, isMobile = false, index }) {
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2 mb-4">
             {project.tech.map((tech, i) => (
-              <span 
+              <span
                 key={i}
                 className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium"
               >
@@ -92,7 +97,7 @@ function ProjectCard({ project, isMobile = false, index }) {
           </div>
 
           {/* Project Type */}
-          <motion.span 
+          <motion.span
             className="inline-block font-sans font-light bg-primary px-4 text-sm py-2 rounded-full mb-4"
             whileHover={{ scale: 1.05 }}
           >
@@ -106,7 +111,7 @@ function ProjectCard({ project, isMobile = false, index }) {
 
           {/* Description */}
           {!isMobile && (
-            <motion.p 
+            <motion.p
               className="font-sans text-lg text-white/90 max-w-lg leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: isHovered ? 1 : 0.7 }}
@@ -125,8 +130,18 @@ function ProjectCard({ project, isMobile = false, index }) {
             >
               <button className="flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300">
                 <span>View Project</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </button>
             </motion.div>
@@ -135,7 +150,26 @@ function ProjectCard({ project, isMobile = false, index }) {
       </div>
 
       {/* Hover Effect Border */}
-      <div className={`absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-white/30 transition-all duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`} />
+      <div
+        className={`absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-white/30 transition-all duration-500 ${
+          isHovered ? "scale-105" : "scale-100"
+        }`}
+      />
+    </motion.div>
+  );
+}
+
+// ✅ Wrapper to handle useTransform safely
+function ProjectWrapper({ project, index, scrollYProgress }) {
+  const scale = useTransform(
+    scrollYProgress,
+    [index * 0.3, index * 0.3 + 0.5],
+    [0.8, 1]
+  );
+
+  return (
+    <motion.div style={{ opacity: 1, scale }} className="mb-20 last:mb-0">
+      <ProjectCard project={project} index={index} />
     </motion.div>
   );
 }
@@ -144,15 +178,19 @@ export default function Projects({ variant = "large" }) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
 
-  const headingClass = variant === "default" 
-    ? "text-4xl md:text-5xl lg:text-6xl" 
-    : "text-4xl md:text-6xl lg:text-8xl";
+  const headingClass =
+    variant === "default"
+      ? "text-4xl md:text-5xl lg:text-6xl"
+      : "text-4xl md:text-6xl lg:text-8xl";
 
   return (
-    <section ref={containerRef} className="relative py-20 px-5 md:px-20 lg:px-30 ">
+    <section
+      ref={containerRef}
+      className="relative py-20 px-5 md:px-20 lg:px-30 "
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 " />
       <div className="absolute inset-0 " />
@@ -165,37 +203,32 @@ export default function Projects({ variant = "large" }) {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h2 className={`uppercase font-heading font-bold text-black mb-6 ${headingClass}`}>
+          <h2
+            className={`uppercase font-heading font-bold text-black mb-6 ${headingClass}`}
+          >
             Featured Projects
           </h2>
-          <motion.p 
+          <motion.p
             className="text-lg font-sans font-light text-black/70 max-w-2xl leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            These selected projects reflect my passion for blending strategy with creativity — 
-            solving real problems through thoughtful design and impactful storytelling.
+            These selected projects reflect my passion for blending strategy with
+            creativity — solving real problems through thoughtful design and
+            impactful storytelling.
           </motion.p>
         </motion.div>
 
         {/* Desktop Scroll Effect */}
         <div className="hidden md:block relative">
           {projects.map((project, index) => (
-            <motion.div
+            <ProjectWrapper
               key={project.id}
-              style={{
-                opacity: 1,
-                scale: useTransform(
-                  scrollYProgress,
-                  [index * 0.3, index * 0.3 + 0.5],
-                  [0.8, 1]
-                )
-              }}
-              className="mb-20 last:mb-0"
-            >
-              <ProjectCard project={project} index={index} />
-            </motion.div>
+              project={project}
+              index={index}
+              scrollYProgress={scrollYProgress}
+            />
           ))}
         </div>
 
